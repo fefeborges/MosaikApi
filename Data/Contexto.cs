@@ -9,12 +9,13 @@ namespace Api.Data
         {
 
         }
-
-        public DbSet<UsersModel> User { get; set; }
+        public DbSet<MarcaModel> Marca { get; set; }
+        public DbSet<TipoProdutoModel> TipoProduto { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.ApplyConfiguration(new UsersMap());
+            modelBuilder.ApplyConfiguration(new MarcaMap());
+            modelBuilder.ApplyConfiguration(new TipoProdutoMap());
             base.OnModelCreating(modelBuilder);
         }
 
