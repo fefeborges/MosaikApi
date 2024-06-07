@@ -10,12 +10,15 @@ namespace Api.Data
 
         }
 
-        public DbSet<UsersModel> User { get; set; }
+        public DbSet<SecaoModel> Secao { get; set; }
+        public DbSet<TamanhoModel> Tamanho { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.ApplyConfiguration(new UsersMap());
+            modelBuilder.ApplyConfiguration(new SecaoMap());
+            modelBuilder.ApplyConfiguration(new TamanhoMap());
             base.OnModelCreating(modelBuilder);
+
         }
 
     }
