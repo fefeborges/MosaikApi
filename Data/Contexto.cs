@@ -9,9 +9,9 @@ namespace Api.Data
         {
 
         }
+        public DbSet<ProdutoModel> Produto { get; set; }
         public DbSet<MarcaModel> Marca { get; set; }
         public DbSet<TipoProdutoModel> TipoProduto { get; set; }
-
         public DbSet<SecaoModel> Secao { get; set; }
         public DbSet<TamanhoModel> Tamanho { get; set; }
 
@@ -21,6 +21,7 @@ namespace Api.Data
             modelBuilder.ApplyConfiguration(new TipoProdutoMap());
             modelBuilder.ApplyConfiguration(new SecaoMap());
             modelBuilder.ApplyConfiguration(new TamanhoMap());
+            modelBuilder.ApplyConfiguration(new ProdutoMap());
             base.OnModelCreating(modelBuilder);
 
         }
