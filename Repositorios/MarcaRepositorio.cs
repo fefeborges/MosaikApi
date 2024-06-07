@@ -41,7 +41,7 @@ namespace Api.Repositorios
             else
             {
                 marcas.NomeMarca = marca.NomeMarca;
-                _dbContext.Marca.Update(marca);
+                _dbContext.Marca.Update(marcas);
                 await _dbContext.SaveChangesAsync();
             }
             return marcas;

@@ -40,15 +40,15 @@ namespace Api.Repositorios
                 }
                 else
                 {
-                    produtos.NomeProduto = produtos.NomeProduto;
-                    produtos.DescricaoProduto = produtos.NomeProduto;
-                    produtos.TipoProdutoId = produtos.TipoProdutoId;
-                    produtos.PrecoProduto = produtos.PrecoProduto;
-                    produtos.QtdEstoque = produtos.QtdEstoque;
-                    produtos.MarcaId = produtos.MarcaId;
-                    produtos.SecaoId = produtos.SecaoId;
-                    produtos.TamanhoId = produtos.TamanhoId;
-                _dbContext.Produto.Update(produto);
+                    produtos.NomeProduto = produto.NomeProduto;
+                    produtos.DescricaoProduto = produto.NomeProduto;
+                    produtos.TipoProdutoId = produto.TipoProdutoId;
+                    produtos.PrecoProduto = produto.PrecoProduto;
+                    produtos.QtdEstoque = produto.QtdEstoque;
+                    produtos.MarcaId = produto.MarcaId;
+                    produtos.SecaoId = produto.SecaoId;
+                    produtos.TamanhoId = produto.TamanhoId;
+                _dbContext.Produto.Update(produtos);
                     await _dbContext.SaveChangesAsync();
                 }
                 return produtos;

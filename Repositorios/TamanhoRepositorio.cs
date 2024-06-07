@@ -41,8 +41,8 @@ namespace Api.Repositorios
                 }
                 else
                 {
-                tamanhos.NomeTamanho = tamanhos.NomeTamanho;
-                    _dbContext.Tamanho.Update(tamanho);
+                tamanhos.NomeTamanho = tamanho.NomeTamanho;
+                    _dbContext.Tamanho.Update(tamanhos);
                     await _dbContext.SaveChangesAsync();
                 }
                 return tamanho;

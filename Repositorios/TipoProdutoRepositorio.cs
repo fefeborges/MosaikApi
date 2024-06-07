@@ -41,8 +41,8 @@ namespace Api.Repositorios
             }
             else
             {
-                tipoprodutos.NomeTipoProduto = tipoprodutos.NomeTipoProduto;
-                _dbContext.TipoProduto.Update(tipoproduto);
+                tipoprodutos.NomeTipoProduto = tipoproduto.NomeTipoProduto;
+                _dbContext.TipoProduto.Update(tipoprodutos);
                 await _dbContext.SaveChangesAsync();
             }
             return tipoprodutos;
