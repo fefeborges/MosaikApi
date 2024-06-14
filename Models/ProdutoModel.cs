@@ -8,6 +8,8 @@
 
         public string DescricaoProduto { get; set; } = string.Empty;
 
+        public string FotoProduto { get; set; } = string.Empty;
+
         public int TipoProdutoId { get; set; }
 
         public double PrecoProduto { get; set; }

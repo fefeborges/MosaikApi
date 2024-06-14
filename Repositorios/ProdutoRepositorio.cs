@@ -42,6 +42,7 @@ namespace Api.Repositorios
                 {
                     produtos.NomeProduto = produto.NomeProduto;
                     produtos.DescricaoProduto = produto.NomeProduto;
+                    produtos.FotoProduto = produto.NomeProduto;
                     produtos.TipoProdutoId = produto.TipoProdutoId;
                     produtos.PrecoProduto = produto.PrecoProduto;
                     produtos.QtdEstoque = produto.QtdEstoque;
