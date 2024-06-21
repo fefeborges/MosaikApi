@@ -14,6 +14,7 @@ namespace Api.Data
         public DbSet<TipoProdutoModel> TipoProduto { get; set; }
         public DbSet<SecaoModel> Secao { get; set; }
         public DbSet<TamanhoModel> Tamanho { get; set; }
+        public DbSet<ClienteModel> Cliente { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -22,6 +23,7 @@ namespace Api.Data
             modelBuilder.ApplyConfiguration(new SecaoMap());
             modelBuilder.ApplyConfiguration(new TamanhoMap());
             modelBuilder.ApplyConfiguration(new ProdutoMap());
+            modelBuilder.ApplyConfiguration(new ClienteMap());
             base.OnModelCreating(modelBuilder);
 
         }
